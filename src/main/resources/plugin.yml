@@ -3,5 +3,3 @@ version: '${version}'
 main: kr.kro.izen.randomtp.RandomTP
 api-version: '1.20'
 
-commands:
-  rtp:
