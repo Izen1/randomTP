@@ -37,10 +37,10 @@ public class RandomTPCommand extends BukkitCommand {
 
         int x = random.nextInt(20001) - 10000;
         int z = random.nextInt(20001) - 10000;
-        int maxY = world.getMaxHeight();
+        int maxY = world.getHighestBlockYAt(x, z) + 1;
         int minY = world.getMinHeight();
 
-        for (int y = minY; y <= maxY; y++) {
+        for (int y = minY; y <= maxY + 1; y++) {
             Location randomLocation = new Location(world, x + 0.5, y, z + 0.5);
             if (safePlace(randomLocation)) {
                 safeLoc.add(randomLocation);
